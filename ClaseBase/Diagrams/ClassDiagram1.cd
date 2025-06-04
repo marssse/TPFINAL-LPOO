@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClaseBase.Entities.Cliente">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQAAEAAAAAAAAAQAIAAAACAIAAAABAAAAAAA=</HashCode>
+      <FileName>Entities\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Cuota">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAEAAAAABAAEAAAAAAAAAAAAAAQAEAAAAA=</HashCode>
+      <FileName>Entities\Cuota.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Destino">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Destino.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Pago">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAKABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Pago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Periodo">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Periodo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Prestamo">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAIABAAAAABAAAAAAAAAAAAAACAQAIAAAAAAAAAAQQ=</HashCode>
+      <FileName>Entities\Prestamo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Rol">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Entities.Usuario">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAACAAAAAEAAAAAAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>Entities\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
