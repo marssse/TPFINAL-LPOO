@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Cuota.cs" />
     <Compile Include="Entities\Destino.cs" />
@@ -49,8 +48,6 @@
     <Compile Include="Entities\Prestamo.cs" />
     <Compile Include="Entities\Rol.cs" />
     <Compile Include="Entities\Usuario.cs" />
-    <Compile Include="GestionClientes.cs" />
-    <Compile Include="GestionPrestamos.cs" />
     <Compile Include="GestionUsuarios.cs" />
     <Compile Include="prestamosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

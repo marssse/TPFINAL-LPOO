@@ -94,6 +94,12 @@
     <Compile Include="Prestamos\Alta.Designer.cs">
       <DependentUpon>Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prestamos\ListadoPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prestamos\ListadoPrestamo.Designer.cs">
+      <DependentUpon>ListadoPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clientes\Alta.resx">
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos\Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\ListadoPrestamo.resx">
+      <DependentUpon>ListadoPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

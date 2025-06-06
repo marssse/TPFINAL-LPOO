@@ -49,8 +49,11 @@
     <Compile Include="Entities\Prestamo.cs" />
     <Compile Include="Entities\Rol.cs" />
     <Compile Include="Entities\Usuario.cs" />
+<<<<<<< HEAD
     <Compile Include="GestionClientes.cs" />
+=======
     <Compile Include="GestionPrestamos.cs" />
+>>>>>>> 6ddee7ce5b4675aa7ccd0e94ffd27b6927e182c8
     <Compile Include="GestionUsuarios.cs" />
     <Compile Include="prestamosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -31,11 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnGestionPagos = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnVerPrestamos = new System.Windows.Forms.Button();
+            this.btnAlta = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnGestionClientes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -61,7 +62,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button6);
+            this.groupBox6.Controls.Add(this.btnGestionPagos);
             this.groupBox6.Location = new System.Drawing.Point(405, 40);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(173, 74);
@@ -69,37 +70,49 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Pagos";
             // 
-            // button6
+            // btnGestionPagos
             // 
-            this.button6.Location = new System.Drawing.Point(20, 29);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 30);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Gestion de Pagos";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGestionPagos.Location = new System.Drawing.Point(20, 29);
+            this.btnGestionPagos.Name = "btnGestionPagos";
+            this.btnGestionPagos.Size = new System.Drawing.Size(128, 30);
+            this.btnGestionPagos.TabIndex = 1;
+            this.btnGestionPagos.Text = "Gestion de Pagos";
+            this.btnGestionPagos.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Controls.Add(this.btnVerPrestamos);
+            this.groupBox5.Controls.Add(this.btnAlta);
             this.groupBox5.Location = new System.Drawing.Point(208, 40);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(173, 74);
+            this.groupBox5.Size = new System.Drawing.Size(173, 130);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Prestamos";
             // 
-            // button5
+            // btnVerPrestamos
             // 
-            this.button5.Location = new System.Drawing.Point(20, 29);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 30);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Gestion Prestamos";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnVerPrestamos.Location = new System.Drawing.Point(20, 79);
+            this.btnVerPrestamos.Name = "btnVerPrestamos";
+            this.btnVerPrestamos.Size = new System.Drawing.Size(128, 30);
+            this.btnVerPrestamos.TabIndex = 2;
+            this.btnVerPrestamos.Text = "Ver Prestamos";
+            this.btnVerPrestamos.UseVisualStyleBackColor = true;
+            this.btnVerPrestamos.Click += new System.EventHandler(this.btnVerPrestamos_Click);
+            // 
+            // btnAlta
+            // 
+            this.btnAlta.Location = new System.Drawing.Point(20, 29);
+            this.btnAlta.Name = "btnAlta";
+            this.btnAlta.Size = new System.Drawing.Size(128, 30);
+            this.btnAlta.TabIndex = 1;
+            this.btnAlta.Text = "Registrar Prestamo";
+            this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.btnGestionClientes);
             this.groupBox4.Location = new System.Drawing.Point(12, 40);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(173, 74);
@@ -107,21 +120,21 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Clientes";
             // 
-            // button4
+            // btnGestionClientes
             // 
-            this.button4.Location = new System.Drawing.Point(20, 29);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 30);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Gestion Clientes";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnGestionClientes.Location = new System.Drawing.Point(20, 29);
+            this.btnGestionClientes.Name = "btnGestionClientes";
+            this.btnGestionClientes.Size = new System.Drawing.Size(128, 30);
+            this.btnGestionClientes.TabIndex = 1;
+            this.btnGestionClientes.Text = "Gestion Clientes";
+            this.btnGestionClientes.UseVisualStyleBackColor = true;
+            this.btnGestionClientes.Click += new System.EventHandler(this.btnGestionClientes_Click);
             // 
             // MainOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 139);
+            this.ClientSize = new System.Drawing.Size(595, 222);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -143,10 +156,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem logout;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnGestionPagos;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGestionClientes;
+        private System.Windows.Forms.Button btnVerPrestamos;
     }
 }
