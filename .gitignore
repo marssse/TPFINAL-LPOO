@@ -30,3 +30,5 @@ $tf*/
 ClaseBase/app.config
 prestamos.mdf
 prestamos_log.LDF
+ClaseBase/Properties/Settings.Designer.cs
+ClaseBase/Properties/Settings.settings
