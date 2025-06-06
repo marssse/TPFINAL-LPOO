@@ -52,6 +52,12 @@
     <Compile Include="Clientes\Alta.Designer.cs">
       <DependentUpon>Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\GestionClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\GestionClientes.designer.cs">
+      <DependentUpon>GestionClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clientes\Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\GestionClientes.resx">
+      <DependentUpon>GestionClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionUsuario.resx">
       <DependentUpon>GestionUsuario.cs</DependentUpon>

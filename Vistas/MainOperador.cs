@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using Vistas.Clientes;
 namespace Vistas
 {
     public partial class MainOperador : Form
@@ -19,6 +19,13 @@ namespace Vistas
         private void logout_Click(object sender, EventArgs e)
         {
             Login.logout_Click(sender, e);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Vistas.Clientes.GestionClientes gClientes = new Vistas.Clientes.GestionClientes();
+            gClientes.Show();
+
         }
     }
 }
