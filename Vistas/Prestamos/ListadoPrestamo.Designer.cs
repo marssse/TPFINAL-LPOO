@@ -48,7 +48,7 @@
             this.Controls.Add(this.dgvPrestamo);
             this.Name = "ListadoPrestamo";
             this.Text = "Prestamos";
-            this.Leave += new System.EventHandler(this.ListadoPrestamo_Leave);
+            
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamo)).EndInit();
             this.ResumeLayout(false);
 
