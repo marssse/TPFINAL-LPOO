@@ -20,5 +20,17 @@ namespace Vistas
         {
             Login.logout_Click(sender, e);
         }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            new Prestamos.Alta().Show();            
+        }
+
+        private void btnVerPrestamos_Click(object sender, EventArgs e)
+        {
+            new Prestamos.ListadoPrestamo().Show();
+        }
+
+
     }
 }
