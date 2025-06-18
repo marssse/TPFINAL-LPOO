@@ -28,5 +28,11 @@ namespace Vistas
             new GestionUsuario().Show();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Vistas.Clientes.GestionClientes gClientes = new Vistas.Clientes.GestionClientes();
+            gClientes.Show();
+        }
+
     }
 }
