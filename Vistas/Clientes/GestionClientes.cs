@@ -281,6 +281,21 @@ namespace Vistas.Clientes
            
         }
 
+        private void btnOrdenarApellido_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvClientes.DataSource = ClaseBase.GestionClientes.ObtenerClientesOrdenadosPorApellido();
+                MessageBox.Show("Clientes ordenados por apellido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("Error al ordenar: {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
         
 
     }

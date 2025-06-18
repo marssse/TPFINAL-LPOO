@@ -121,5 +121,24 @@ namespace ClaseBase
             SqlParameter param = new SqlParameter("@dni", dni);
             DatabaseHelper.ExecuteNonQuery(query, param);
         }
+
+        // Metodo para mostrar cliente ordenador por apellido
+        public static DataTable ObtenerClientesOrdenadosPorApellido()
+        {
+            string query = @"
+        SELECT 
+            CLI_DNI AS 'DNI',
+            CLI_Nombre AS 'Nombre',
+            CLI_Apellido AS 'Apellido',
+            CLI_Sexo AS 'Sexo',
+            CLI_FechaNacimiento AS 'FechaNacimiento',
+            CLI_Ingresos AS 'Ingresos',
+            CLI_Direccion AS 'Direccion',
+            CLI_Telefono AS 'Telefono'
+        FROM Cliente
+        ORDER BY CLI_Apellido ASC";  // Orden ascendente (A-Z)
+
+            return DatabaseHelper.ExecuteQuery(query);
+        }
     }
 }
