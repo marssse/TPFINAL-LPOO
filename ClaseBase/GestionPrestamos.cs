@@ -139,23 +139,89 @@ namespace ClaseBase
         }
 
         // 5. Obtener listado de préstamos
-        public static DataTable ObtenerPrestamos()
+        // Método para obtener préstamos con todos los campos requeridos
+        public static DataTable ObtenerPrestamos(int? destinoCodigo = null)
         {
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = @"SELECT p.PRE_Numero AS [N° Préstamo],
-                                   c.CLI_Apellido + ', ' + c.CLI_Nombre AS Cliente,
-                                   d.DES_Descripcion AS Destino,
-                                   p.PRE_Fecha AS [Fecha Préstamo],
-                                   p.PRE_Importe AS Importe,
-                                   p.PRE_Estado AS Estado
+                string query = @"SELECT 
+                                p.PRE_Numero AS [N° Préstamo],
+                                c.CLI_Apellido + ', ' + c.CLI_Nombre AS Cliente,
+                                d.DES_Descripcion AS Destino,
+                                p.PRE_Fecha AS Fecha,
+                                p.PRE_Importe AS Importe,
+                                per.PER_Descripcion AS Período,
+                                p.PRE_TasaInteres AS [Tasa de Interés],
+                                p.PRE_CantidadCuotas AS [Cantidad de Cuotas],
+                                p.PRE_Estado AS Estado
                             FROM Prestamo p
                             JOIN Cliente c ON p.CLI_DNI = c.CLI_DNI
-                            JOIN Destino d ON p.DES_Codigo = d.DES_Codigo";
+                            JOIN Destino d ON p.DES_Codigo = d.DES_Codigo
+                            JOIN Periodo per ON p.PER_Codigo = per.PER_Codigo
+                            WHERE (@DestinoCodigo IS NULL OR p.DES_Codigo = @DestinoCodigo)
+                            ORDER BY p.PRE_Fecha DESC";
 
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@DestinoCodigo", destinoCodigo ?? (object)DBNull.Value);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
+        public static DataTable ObtenerDestinosEnPrestamo()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                string query = "SELECT DES_Codigo, DES_Descripcion FROM Destino ORDER BY DES_Descripcion";
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
+                da.Fill(dt);
+
+                // Agregar fila para "Todos los destinos" de manera explícita
+                DataRow row = dt.NewRow();
+                row["DES_Codigo"] = DBNull.Value;
+                row["DES_Descripcion"] = "Todos los destinos";
+                dt.Rows.InsertAt(row, 0);
+
+                // Asegurar que la columna DES_Codigo es de tipo int
+                dt.Columns["DES_Codigo"].DataType = typeof(int);
+            }
+            return dt;
+        }
+
+        public static DataTable ObtenerPrestamosPorRangoFechas(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                string query = @"SELECT 
+                                p.PRE_Numero AS [N° Préstamo],
+                                c.CLI_Apellido + ', ' + c.CLI_Nombre AS Cliente,
+                                d.DES_Descripcion AS Destino,
+                                p.PRE_Fecha AS Fecha,
+                                p.PRE_Importe AS Importe,
+                                per.PER_Descripcion AS Período,
+                                p.PRE_TasaInteres AS [Tasa de Interés],
+                                p.PRE_CantidadCuotas AS [Cantidad de Cuotas],
+                                p.PRE_Estado AS Estado
+                            FROM Prestamo p
+                            JOIN Cliente c ON p.CLI_DNI = c.CLI_DNI
+                            JOIN Destino d ON p.DES_Codigo = d.DES_Codigo
+                            JOIN Periodo per ON p.PER_Codigo = per.PER_Codigo
+                            WHERE p.PRE_Fecha BETWEEN @FechaDesde AND @FechaHasta
+                            ORDER BY p.PRE_Fecha DESC";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@FechaDesde", fechaDesde.Date);
+                cmd.Parameters.AddWithValue("@FechaHasta", fechaHasta.Date.AddDays(1).AddSeconds(-1)); // Para incluir todo el día
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
             return dt;
