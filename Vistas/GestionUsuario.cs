@@ -22,6 +22,13 @@ namespace Vistas
         {
             load_combo_roles();
             load_usuarios();
+            // Configurar RadioButtons
+            rbOrdenUsuario.Text = "Ordenar por Usuario";
+            rbOrdenApellido.Text = "Ordenar por Apellido";
+            rbOrdenUsuario.Checked = true; // Opción por defecto
+
+            // Configurar botón
+            btnOrdenar.Text = "Aplicar Orden";
         }
 
         private void load_combo_roles()
@@ -181,5 +188,31 @@ namespace Vistas
             ModoEdicion(false);
             MessageBox.Show("Usuario eliminado correctamente");
         }
+        //metodos tp3
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbOrdenUsuario.Checked)
+                {
+                    dgvUsuarios.DataSource = GestionUsuarios.ObtenerUsuariosOrdenadosPorUsuario();
+                }
+                else if (rbOrdenApellido.Checked)
+                {
+                    dgvUsuarios.DataSource = GestionUsuarios.ObtenerUsuariosOrdenadosPorApellido();
+                }
+
+                MessageBox.Show("Usuarios ordenados correctamente.", "Éxito",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ordenar usuarios: " + ex.Message, "Error",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
     }
 }

@@ -164,6 +164,39 @@ namespace ClaseBase
             }
         }
 
-        
+        // metodos del tp3
+        // Método para obtener usuarios ordenados por UserName
+        public static DataTable ObtenerUsuariosOrdenadosPorUsuario()
+        {
+            string query = @"
+        SELECT 
+            U.USU_ID AS [ID],
+            R.ROL_Descripcion AS [Rol],
+            U.USU_ApellidoNombre AS [Apellido y Nombre],
+            U.USU_NombreUsuario AS [Usuario],
+            U.ROL_Codigo AS [Código de Rol]
+        FROM Usuario U
+        LEFT JOIN Rol R ON R.ROL_Codigo = U.ROL_Codigo
+        ORDER BY U.USU_NombreUsuario ASC";
+
+            return DatabaseHelper.ExecuteQuery(query);
+        }
+
+        // Método para obtener usuarios ordenados por ApellidoNombre
+        public static DataTable ObtenerUsuariosOrdenadosPorApellido()
+        {
+            string query = @"
+        SELECT 
+            U.USU_ID AS [ID],
+            R.ROL_Descripcion AS [Rol],
+            U.USU_ApellidoNombre AS [Apellido y Nombre],
+            U.USU_NombreUsuario AS [Usuario],
+            U.ROL_Codigo AS [Código de Rol]
+        FROM Usuario U
+        LEFT JOIN Rol R ON R.ROL_Codigo = U.ROL_Codigo
+        ORDER BY U.USU_ApellidoNombre ASC";
+
+            return DatabaseHelper.ExecuteQuery(query);
+        }
     }
 }
