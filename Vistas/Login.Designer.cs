@@ -42,9 +42,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(26, 151);
+            this.btnCancelar.Location = new System.Drawing.Point(61, 337);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(7);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(97, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(226, 78);
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.Text = "Salir";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(136, 151);
+            this.btnLogin.Location = new System.Drawing.Point(317, 337);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(7);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(97, 35);
+            this.btnLogin.Size = new System.Drawing.Size(226, 78);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Ingresar";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -66,43 +68,49 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(65, 44);
+            this.txtUsuario.Location = new System.Drawing.Point(152, 98);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(7);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(168, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(387, 35);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtContrasenia
             // 
-            this.txtContrasenia.Location = new System.Drawing.Point(65, 99);
+            this.txtContrasenia.Location = new System.Drawing.Point(152, 221);
+            this.txtContrasenia.Margin = new System.Windows.Forms.Padding(7);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.PasswordChar = '*';
-            this.txtContrasenia.Size = new System.Drawing.Size(168, 20);
+            this.txtContrasenia.Size = new System.Drawing.Size(387, 35);
             this.txtContrasenia.TabIndex = 3;
+            this.txtContrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasenia_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 28);
+            this.label1.Location = new System.Drawing.Point(145, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(96, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 83);
+            this.label2.Location = new System.Drawing.Point(145, 185);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(136, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Vistas.Properties.Resources.keypng;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 83);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 185);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(7);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 36);
+            this.pictureBox2.Size = new System.Drawing.Size(93, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -110,18 +118,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Vistas.Properties.Resources.usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(250, 201);
+            this.ClientSize = new System.Drawing.Size(616, 448);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -130,6 +139,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCancelar);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

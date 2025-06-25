@@ -14,9 +14,12 @@ namespace Vistas
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
+            this.AcceptButton = btnLogin;
+
         }
         
         private void btnCancelar_Click(object sender, EventArgs e)
