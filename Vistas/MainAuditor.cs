@@ -52,5 +52,16 @@ namespace Vistas
             lPagos.Show();
         }
 
+
+        private void verPrestamos_Click(object sender, EventArgs e)
+        {
+            new Prestamos.ListadoPrestamo().Show();
+        }
+
+        private void btnRegistrarPrestamo_Click(object sender, EventArgs e)
+        {
+            new Prestamos.Alta().Show();
+        }
+
     }
 }
