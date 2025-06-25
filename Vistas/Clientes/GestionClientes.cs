@@ -203,21 +203,25 @@ namespace Vistas.Clientes
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvClientes.Rows[e.RowIndex];
-                dniActual = row.Cells["colDni"].Value.ToString();
-                txtDNI.Text = dniActual;
-                txtNombre.Text = row.Cells["colNombre"].Value.ToString();
-                txtApellido.Text = row.Cells["colApellido"].Value.ToString();
-                cmbSexo.SelectedItem = row.Cells["colSexo"].Value.ToString();
-                fechaNacimiento.Value = Convert.ToDateTime(row.Cells["colFechaNacimiento"].Value);
-                txtIngresos.Text = row.Cells["colIngresos"].Value.ToString();
-                txtDireccion.Text = row.Cells["colDireccion"].Value.ToString();
-                txtTelefono.Text = row.Cells["colTelefono"].Value.ToString();
+                if (row.Cells["colDni"].Value.ToString() != "")
+                {
+                    dniActual = row.Cells["colDni"].Value.ToString();
+                    txtDNI.Text = dniActual;
+                    txtNombre.Text = row.Cells["colNombre"].Value.ToString();
+                    txtApellido.Text = row.Cells["colApellido"].Value.ToString();
+                    cmbSexo.SelectedItem = row.Cells["colSexo"].Value.ToString();
+                    fechaNacimiento.Value = Convert.ToDateTime(row.Cells["colFechaNacimiento"].Value);
+                    txtIngresos.Text = row.Cells["colIngresos"].Value.ToString();
+                    txtDireccion.Text = row.Cells["colDireccion"].Value.ToString();
+                    txtTelefono.Text = row.Cells["colTelefono"].Value.ToString();
 
-
-                EstablecerModoEdicion(true);
+                    EstablecerModoEdicion(true);
+                }
+                
             }
         }
 
