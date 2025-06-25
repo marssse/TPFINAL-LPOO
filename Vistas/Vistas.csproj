@@ -58,6 +58,12 @@
     <Compile Include="Clientes\GestionClientes.designer.cs">
       <DependentUpon>GestionClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Destinos\GestionDestinos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destinos\GestionDestinos.Designer.cs">
+      <DependentUpon>GestionDestinos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\GestionClientes.resx">
       <DependentUpon>GestionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destinos\GestionDestinos.resx">
+      <DependentUpon>GestionDestinos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionUsuario.resx">
       <DependentUpon>GestionUsuario.cs</DependentUpon>
