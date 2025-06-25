@@ -37,6 +37,7 @@
             this.btnAlta = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGestionClientes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -49,52 +50,61 @@
             this.logout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(595, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1388, 49);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // logout
             // 
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(41, 20);
+            this.logout.Size = new System.Drawing.Size(80, 41);
             this.logout.Text = "Salir";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.btnGestionPagos);
-            this.groupBox6.Location = new System.Drawing.Point(405, 40);
+            this.groupBox6.Location = new System.Drawing.Point(945, 89);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(173, 74);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(7);
+            this.groupBox6.Size = new System.Drawing.Size(404, 290);
             this.groupBox6.TabIndex = 17;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Pagos";
             // 
             // btnGestionPagos
             // 
-            this.btnGestionPagos.Location = new System.Drawing.Point(20, 29);
+            this.btnGestionPagos.Location = new System.Drawing.Point(47, 65);
+            this.btnGestionPagos.Margin = new System.Windows.Forms.Padding(7);
             this.btnGestionPagos.Name = "btnGestionPagos";
-            this.btnGestionPagos.Size = new System.Drawing.Size(128, 30);
+            this.btnGestionPagos.Size = new System.Drawing.Size(299, 67);
             this.btnGestionPagos.TabIndex = 1;
             this.btnGestionPagos.Text = "Gestion de Pagos";
             this.btnGestionPagos.UseVisualStyleBackColor = true;
+            this.btnGestionPagos.Click += new System.EventHandler(this.btnGestionPagos_Click);
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.btnVerPrestamos);
             this.groupBox5.Controls.Add(this.btnAlta);
-            this.groupBox5.Location = new System.Drawing.Point(208, 40);
+            this.groupBox5.Location = new System.Drawing.Point(485, 89);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(173, 130);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(7);
+            this.groupBox5.Size = new System.Drawing.Size(404, 290);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Prestamos";
             // 
             // btnVerPrestamos
             // 
-            this.btnVerPrestamos.Location = new System.Drawing.Point(20, 79);
+            this.btnVerPrestamos.Location = new System.Drawing.Point(47, 176);
+            this.btnVerPrestamos.Margin = new System.Windows.Forms.Padding(7);
             this.btnVerPrestamos.Name = "btnVerPrestamos";
-            this.btnVerPrestamos.Size = new System.Drawing.Size(128, 30);
+            this.btnVerPrestamos.Size = new System.Drawing.Size(299, 67);
             this.btnVerPrestamos.TabIndex = 2;
             this.btnVerPrestamos.Text = "Ver Prestamos";
             this.btnVerPrestamos.UseVisualStyleBackColor = true;
@@ -102,9 +112,10 @@
             // 
             // btnAlta
             // 
-            this.btnAlta.Location = new System.Drawing.Point(20, 29);
+            this.btnAlta.Location = new System.Drawing.Point(47, 65);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(7);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(128, 30);
+            this.btnAlta.Size = new System.Drawing.Size(299, 67);
             this.btnAlta.TabIndex = 1;
             this.btnAlta.Text = "Registrar Prestamo";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -113,32 +124,47 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnGestionClientes);
-            this.groupBox4.Location = new System.Drawing.Point(12, 40);
+            this.groupBox4.Location = new System.Drawing.Point(28, 89);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(173, 74);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.groupBox4.Size = new System.Drawing.Size(404, 165);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Clientes";
             // 
             // btnGestionClientes
             // 
-            this.btnGestionClientes.Location = new System.Drawing.Point(20, 29);
+            this.btnGestionClientes.Location = new System.Drawing.Point(47, 65);
+            this.btnGestionClientes.Margin = new System.Windows.Forms.Padding(7);
             this.btnGestionClientes.Name = "btnGestionClientes";
-            this.btnGestionClientes.Size = new System.Drawing.Size(128, 30);
+            this.btnGestionClientes.Size = new System.Drawing.Size(299, 67);
             this.btnGestionClientes.TabIndex = 1;
             this.btnGestionClientes.Text = "Gestion Clientes";
             this.btnGestionClientes.UseVisualStyleBackColor = true;
             this.btnGestionClientes.Click += new System.EventHandler(this.btnGestionClientes_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 176);
+            this.button1.Margin = new System.Windows.Forms.Padding(7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(299, 67);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Ver Pagos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainOperador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 222);
+            this.ClientSize = new System.Drawing.Size(1388, 495);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "MainOperador";
             this.Text = "MainOperador";
             this.menuStrip1.ResumeLayout(false);
@@ -162,5 +188,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnGestionClientes;
         private System.Windows.Forms.Button btnVerPrestamos;
+        private System.Windows.Forms.Button button1;
     }
 }

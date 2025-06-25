@@ -94,6 +94,18 @@
     <Compile Include="MainOperador.Designer.cs">
       <DependentUpon>MainOperador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pagos\GestionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\GestionPago.Designer.cs">
+      <DependentUpon>GestionPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\ListarPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\ListarPagos.Designer.cs">
+      <DependentUpon>ListarPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prestamos\Alta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainOperador.resx">
       <DependentUpon>MainOperador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\GestionPago.resx">
+      <DependentUpon>GestionPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\ListarPagos.resx">
+      <DependentUpon>ListarPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos\Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>

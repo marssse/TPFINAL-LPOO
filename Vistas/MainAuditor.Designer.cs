@@ -37,12 +37,13 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGestionarDestino = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGestionarDestino = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -54,12 +55,13 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.button6);
             this.groupBox6.Location = new System.Drawing.Point(938, 440);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.groupBox6.Size = new System.Drawing.Size(404, 165);
+            this.groupBox6.Size = new System.Drawing.Size(404, 264);
             this.groupBox6.TabIndex = 18;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Pagos";
@@ -73,6 +75,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Gestion de Pagos";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox5
             // 
@@ -154,6 +157,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Destinos";
             // 
+            // btnGestionarDestino
+            // 
+            this.btnGestionarDestino.Location = new System.Drawing.Point(63, 190);
+            this.btnGestionarDestino.Margin = new System.Windows.Forms.Padding(7);
+            this.btnGestionarDestino.Name = "btnGestionarDestino";
+            this.btnGestionarDestino.Size = new System.Drawing.Size(299, 67);
+            this.btnGestionarDestino.TabIndex = 4;
+            this.btnGestionarDestino.Text = "Gestion de Destinos";
+            this.btnGestionarDestino.UseVisualStyleBackColor = true;
+            this.btnGestionarDestino.Click += new System.EventHandler(this.btnGestionarDestino_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(63, 65);
@@ -205,16 +219,16 @@
             this.logout.Text = "Salir";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
-            // btnGestionarDestino
+            // button1
             // 
-            this.btnGestionarDestino.Location = new System.Drawing.Point(63, 190);
-            this.btnGestionarDestino.Margin = new System.Windows.Forms.Padding(7);
-            this.btnGestionarDestino.Name = "btnGestionarDestino";
-            this.btnGestionarDestino.Size = new System.Drawing.Size(299, 67);
-            this.btnGestionarDestino.TabIndex = 4;
-            this.btnGestionarDestino.Text = "Gestion de Destinos";
-            this.btnGestionarDestino.UseVisualStyleBackColor = true;
-            this.btnGestionarDestino.Click += new System.EventHandler(this.btnGestionarDestino_Click);
+            this.button1.Location = new System.Drawing.Point(47, 166);
+            this.button1.Margin = new System.Windows.Forms.Padding(7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(299, 67);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Ver Pagos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainAuditor
             // 
@@ -261,5 +275,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem logout;
         private System.Windows.Forms.Button btnGestionarDestino;
+        private System.Windows.Forms.Button button1;
     }
 }

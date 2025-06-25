@@ -37,6 +37,18 @@ namespace Vistas
             gClientes.Show();
         }
 
+        private void btnGestionPagos_Click(object sender, EventArgs e)
+        {
+            Vistas.Pagos.GestionPago gPagos = new Vistas.Pagos.GestionPago();
+            gPagos.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Vistas.Pagos.ListarPagos lPagos = new Vistas.Pagos.ListarPagos();
+            lPagos.Show();
+        }
+
 
     }
 }

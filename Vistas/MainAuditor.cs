@@ -40,5 +40,17 @@ namespace Vistas
             gDestino.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Vistas.Pagos.GestionPago gPagos = new Vistas.Pagos.GestionPago();
+            gPagos.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Vistas.Pagos.ListarPagos lPagos = new Vistas.Pagos.ListarPagos();
+            lPagos.Show();
+        }
+
     }
 }
