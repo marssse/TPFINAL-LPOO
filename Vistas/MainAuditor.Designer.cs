@@ -42,6 +42,7 @@
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGestionarDestino = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -54,10 +55,10 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.button6);
-            this.groupBox6.Location = new System.Drawing.Point(938, 299);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox6.Location = new System.Drawing.Point(938, 440);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox6.Size = new System.Drawing.Size(404, 165);
             this.groupBox6.TabIndex = 18;
             this.groupBox6.TabStop = false;
@@ -66,7 +67,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(47, 65);
-            this.button6.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.button6.Margin = new System.Windows.Forms.Padding(7);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(299, 67);
             this.button6.TabIndex = 1;
@@ -76,10 +77,10 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Location = new System.Drawing.Point(478, 299);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox5.Location = new System.Drawing.Point(478, 440);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox5.Size = new System.Drawing.Size(404, 165);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
@@ -88,7 +89,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(47, 65);
-            this.button5.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.button5.Margin = new System.Windows.Forms.Padding(7);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(299, 67);
             this.button5.TabIndex = 1;
@@ -98,10 +99,10 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Location = new System.Drawing.Point(21, 299);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox4.Location = new System.Drawing.Point(16, 440);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox4.Size = new System.Drawing.Size(404, 165);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
@@ -110,7 +111,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(47, 65);
-            this.button4.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.button4.Margin = new System.Windows.Forms.Padding(7);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(299, 67);
             this.button4.TabIndex = 1;
@@ -122,9 +123,9 @@
             // 
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Location = new System.Drawing.Point(938, 87);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox3.Size = new System.Drawing.Size(404, 165);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
@@ -133,7 +134,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(63, 65);
-            this.button3.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.button3.Margin = new System.Windows.Forms.Padding(7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(299, 67);
             this.button3.TabIndex = 5;
@@ -142,12 +143,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnGestionarDestino);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Location = new System.Drawing.Point(478, 87);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.groupBox2.Size = new System.Drawing.Size(404, 165);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.groupBox2.Size = new System.Drawing.Size(404, 306);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Destinos";
@@ -155,7 +157,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(63, 65);
-            this.button2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.button2.Margin = new System.Windows.Forms.Padding(7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(299, 67);
             this.button2.TabIndex = 3;
@@ -166,9 +168,9 @@
             // 
             this.groupBox1.Controls.Add(this.btnGestionUsuarios);
             this.groupBox1.Location = new System.Drawing.Point(21, 87);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox1.Size = new System.Drawing.Size(404, 165);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -177,7 +179,7 @@
             // btnGestionUsuarios
             // 
             this.btnGestionUsuarios.Location = new System.Drawing.Point(47, 65);
-            this.btnGestionUsuarios.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnGestionUsuarios.Margin = new System.Windows.Forms.Padding(7);
             this.btnGestionUsuarios.Name = "btnGestionUsuarios";
             this.btnGestionUsuarios.Size = new System.Drawing.Size(299, 67);
             this.btnGestionUsuarios.TabIndex = 1;
@@ -203,11 +205,22 @@
             this.logout.Text = "Salir";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // btnGestionarDestino
+            // 
+            this.btnGestionarDestino.Location = new System.Drawing.Point(63, 190);
+            this.btnGestionarDestino.Margin = new System.Windows.Forms.Padding(7);
+            this.btnGestionarDestino.Name = "btnGestionarDestino";
+            this.btnGestionarDestino.Size = new System.Drawing.Size(299, 67);
+            this.btnGestionarDestino.TabIndex = 4;
+            this.btnGestionarDestino.Text = "Gestion de Destinos";
+            this.btnGestionarDestino.UseVisualStyleBackColor = true;
+            this.btnGestionarDestino.Click += new System.EventHandler(this.btnGestionarDestino_Click);
+            // 
             // MainAuditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 524);
+            this.ClientSize = new System.Drawing.Size(1365, 885);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -215,7 +228,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "MainAuditor";
             this.Text = "MainAuditor";
             this.groupBox6.ResumeLayout(false);
@@ -247,5 +260,6 @@
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem logout;
+        private System.Windows.Forms.Button btnGestionarDestino;
     }
 }

@@ -28,5 +28,11 @@ namespace Vistas
             new GestionUsuario().Show();
         }
 
+        private void btnGestionarDestino_Click(object sender, EventArgs e)
+        {
+            Vistas.Destinos.GestionDestinos gDestino = new Vistas.Destinos.GestionDestinos();
+            gDestino.Show();
+        }
+
     }
 }
