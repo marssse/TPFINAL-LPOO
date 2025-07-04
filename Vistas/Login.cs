@@ -107,5 +107,10 @@ namespace Vistas
             }
         }
 
+        private void txtContrasenia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
